@@ -13,8 +13,8 @@ $c=20.8; //float type
 echo $c.'<br/>';
 $d='Hossain Mamun'; //string type
 echo $d.'<br/>';
-
-
+$names = array('Mamun','shovon');
+var_dump($names);
 
 ?>
 
