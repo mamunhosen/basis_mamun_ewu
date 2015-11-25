@@ -11,6 +11,8 @@ $b=20; //integer type
 echo $b.'<br/>';
 $c=20.8; //float type
 echo $c.'<br/>';
+$d='Hossain Mamun'; //string type
+echo $d.'<br/>';
 
 
 
