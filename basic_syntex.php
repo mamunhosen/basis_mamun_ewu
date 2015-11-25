@@ -6,8 +6,11 @@
 </head>
 <body>
 <?php 
-echo 'Default tag';
+echo 'Default tag'.'<br/>';
 ?>
+<%
+echo 'aspTag';
+%>
 
 
 </body>
