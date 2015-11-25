@@ -9,8 +9,13 @@
 echo 'Default tag'.'<br/>';
 ?>
 <%
-echo 'aspTag';
+echo 'aspTag'.'<br/>';
+
 %>
+<?
+echo 'ShortOpenTag';
+
+?>
 
 
 </body>
