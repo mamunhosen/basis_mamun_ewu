@@ -6,7 +6,10 @@
 <body>
 <?php
 $a=true; //Boolean Type
-echo $a;
+echo $a.'<br/>';
+$b=20; //integer type
+echo $b.'<br/>';
+
 
 
 ?>
