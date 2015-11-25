@@ -13,9 +13,12 @@ echo 'aspTag'.'<br/>';
 
 %>
 <?
-echo 'ShortOpenTag';
+echo 'ShortOpenTag'.'<br/>';
 
 ?>
+<script language="php">
+ echo 'Script Tag'
+</script>
 
 
 </body>
