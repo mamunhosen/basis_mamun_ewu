@@ -27,6 +27,16 @@ function Bitm(){
  $welcome->php13();
  //use_of_trait
 
+trait use_of_trait{
+	public function greetings(){
+       echo "Welcome to new use of trait";
+	}
+}
+
+class father_of_trait{
+	use use_of_trait;
+}
+father_of_trait::greetings();
 
   
 ?>
