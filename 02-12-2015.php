@@ -26,31 +26,33 @@ array('Ronaldo' =>  array('La_liga' =>50 ,'Champions_league'=>12 ),
 	}
 	echo "</br>";
 
-	$friends=[
-    "John"=>['Location'=>'Dhaka','Age'=>30,'Profession'=>['Designer','Developer','Engineer']],
-    "Bill"=>['Location'=>'CTG','Age'=>29,'Profession'=>['Programmer','Engineer','Teacher']],
-    "Mark"=>['Location'=>'Barishal','Age'=>33,'Profession'=>['Selfishness','Mizer','Engineer']]
-
-	];
-
-   foreach ($friends as $Name=> $value) {
-   echo "<br/>"."Name : $Name </br>";	
-   foreach ($value as $info => $info_value) {
-   	if (is_array($info_value)) {
-   		echo $info.":";
-   		foreach ($info_value as $key=>$profession) {
-             
-   			echo $profession.",";
-
-   		}
-   	}
-   		else{
-               echo "{$info}:{$info_value}</br>";
-
-   		}
-   	}
-
+$friends=[
+    "John"=>[
+        'Location'=>'Dhaka', 
+        'Age'=>30, 
+        'Profession'=>['Designer','Developer','Engineer']
+    ],
+    "Bill"=>[
+        'Location'=>'CTG',
+        'Age'=>29,
+        'Profession'=>['Programmer','Engineer','Teacher']
+    ],
+    "Mark"=>[
+        'Location'=>'Barishal',
+        'Age'=>33,
+        'Profession'=>['Network','Hardware','Engineer']
+    ]
+];
+foreach ($friends as $Name=> $value) {
+    echo "Name : $Name </br>";  
+    foreach ($value as $info => $info_value) {
+        if (is_array($info_value)) 
+            echo "$info : ". implode(', ',$info_value) . '.</br>';
+        else
+            echo "$info : $info_value </br>";
     }
+    echo '</br>';
+}
 
 
 ?>
