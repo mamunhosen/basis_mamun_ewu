@@ -4,6 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Control Structure</title>
 </head>
+<style type="text/css">
+table{
+width: 10%;
+}
+  table th td{
+
+   border:1px solid black;
+  }
+   th td {
+   padding: 1px;
+}
+
+</style>
 <body>
 	<?php
 $run=array('Sakib'=>102,'Tamim'=>137,'Mushfiq'=>147);
@@ -54,6 +67,53 @@ foreach ($friends as $Name=> $value) {
     echo '</br>';
 }
 
+$people=[
+    "John"=>[
+        'Location'=>'Dhaka', 
+        'Age'=>30, 
+        'Profession'=>'Designer'
+    ],
+    "Bill"=>[
+        'Location'=>'CTG',
+        'Age'=>29,
+        'Profession'=>'Programmer'
+    ],
+    "Mark"=>[
+        'Location'=>'Barishal',
+        'Age'=>33,
+        'Profession'=>'Networker'
+    ]
+];
+?>
+<table>
+<tr>
+<th>Name</th>
+
+
+<th>Location</th>
+
+
+<th>Age</th>
+
+
+<th>Profession</th>
+</tr>
+<?php
+foreach ($people as $name => $value) {
+
+  echo "<tr>";
+  echo "<td>$name</td>";
+
+
+   foreach ($value as $info => $info_value) {
+   
+     echo "<td>$info_value</td>";
+
+     }
+   echo "</tr>";
+
+}
+echo "</table>";
 
 ?>
 </body>
