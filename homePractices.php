@@ -33,4 +33,22 @@ echo "<br/>";
   while (!feof($file2)) {
   	echo fgets($file2)."<br/>";
   }
+
+  $numbers=[2,3,5,6,7,8,32,33,34,54,44,43,90,66,77];
+  $arrlen=count($numbers);
+  for ($i=0; $i <$arrlen ; $i++) { 
+  	if (($numbers[$i]%2)) {
+  		continue;
+  	}
+  	echo $numbers[$i]."<br/>";
+  }
+$str1 = 'yabadabadoo';
+$str2 = 'yaba';
+if (strpos($str1,$str2)!==false) {
+    echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
+} else {
+    echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
+}
+echo "<br/>";
+echo "I am using MySQL version: ". mysql_get_server_info();
 ?>
