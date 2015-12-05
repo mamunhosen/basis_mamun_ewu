@@ -1,10 +1,13 @@
 <?php
-function __autoload($className){
-  include_once($className.".php");
-}
 
-$whiteDuster=new Duster('White','100g');
-$redDuster=new Duster('Red','120g');
+function __autoload($className){
+$fileName=str_replace("\\", "/", $className.".php");//replacing backslash with forward slash to find the file;
+include_once($fileName);
+}
+use bitm\product\duster;
+use bitm\person\person;
+$whiteDuster = new duster('White','100g');
+$redDuster = new duster('Red','120g');
 
 echo "Color of Duster Is : ".$whiteDuster->color." and weight of the duster is ".$whiteDuster->weight;
 echo "<hr/>";
@@ -15,8 +18,8 @@ echo "<hr/>";
 //Another class declaration.
 
 
-$mamun=new person();
-$shuvo=new person();
+$mamun= new person();
+$shuvo= new person();
 
 
 
