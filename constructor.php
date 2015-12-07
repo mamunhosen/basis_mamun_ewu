@@ -18,7 +18,13 @@ public function showResult()
 {
 echo "Factorial of {$this->number} is {$this->result}. ";
 }
+function __destruct(){
+	echo "object destroyed. ";
+}
 }
 $fact=new Factorial(5);
 $fact->showResult();
+
+
+
 ?>

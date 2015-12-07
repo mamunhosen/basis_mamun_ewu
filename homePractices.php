@@ -51,4 +51,12 @@ if (strpos($str1,$str2)!==false) {
 }
 echo "<br/>";
 echo "I am using MySQL version: ". mysql_get_server_info();
+echo "<br/>";
+$var='';
+if (empty($var)) {
+  echo "This is a empty value";
+}
+else{
+  echo "this is not null";
+}
 ?>

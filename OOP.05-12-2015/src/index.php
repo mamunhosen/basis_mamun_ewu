@@ -1,6 +1,7 @@
 <?php
 
 function __autoload($className){
+//var_dump($className);
 $fileName=str_replace("\\", "/", $className.".php");//replacing backslash with forward slash to find the file;
 include_once($fileName);
 }

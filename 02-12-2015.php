@@ -57,12 +57,13 @@ $friends=[
     ]
 ];
 foreach ($friends as $Name=> $value) {
-    echo "Name : $Name </br>";  
+    echo "Name: $Name";  
     foreach ($value as $info => $info_value) {
+         echo " | ".ucwords($info)." : ";
         if (is_array($info_value)) 
-            echo "$info : ". implode(', ',$info_value) . '.</br>';
+            echo implode(', ',$info_value) . '.';
         else
-            echo "$info : $info_value </br>";
+            echo "$info_value";
     }
     echo '</br>';
 }
@@ -114,6 +115,19 @@ foreach ($people as $name => $value) {
 
 }
 echo "</table>";
+ echo "</tr>";
+ $i=0;
+ while ($i<10) {
+   $i++;
+   if ($i==4 || $i==6 || $i==9) {
+     echo "Number $i is missing<br/>";
+     continue;
+   }
+   
+    echo "$i";
+    echo "</br>";
+  
+ }
 
 ?>
 </body>
