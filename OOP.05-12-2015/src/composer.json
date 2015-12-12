@@ -1,7 +1,7 @@
 {
     "autoload": {
     "psr-4": {
-        "bitm\\product\\": "src/bitm/person/"
+        "App\\": "src\\bitm"
     }
 
   }
