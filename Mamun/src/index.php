@@ -6,10 +6,11 @@
 </head>
 <body>
 <?php
-function __autoload($className){
+/*function __autoload($className){
 	//var_dump($className);
    include_once($className.".php");
-}
+}*/
+include_once("vendor/autoload.php");
 
 use bitm\person\person;
 use bitm\age\age;

@@ -2,7 +2,7 @@
 
 namespace bitm\age;
 
-use bitm\person\person;
+
 class Age 
 {
 	public $age='';
