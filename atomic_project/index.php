@@ -20,14 +20,14 @@
 	<div class="row">
 		<div class="col-sm-12 topics">
 			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Mobile</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Birthday</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Gender</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Book</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">City</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Hobby</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Terms and Condition</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">Summary Of Organization</a>
-			<a class="btn btn-primary btn-lg" href="views/SEIP107992/mobile/index.php">NewsLetter</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/birthday/index.php">Birthday</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/gender/index.php">Gender</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/book/index.php">Book</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/city/index.php">City</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/hobby/index.php">Hobby</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/terms_and_condition/index.php">Terms and Condition</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/summary_of_organization/index.php">Summary Of Organization</a>
+			<a class="btn btn-primary btn-lg" href="views/SEIP107992/newsletter/index.php">NewsLetter</a>
 		</div>
 	</div>
 </div>

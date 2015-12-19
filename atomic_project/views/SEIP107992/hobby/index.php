@@ -7,9 +7,9 @@
 <body>
 <?php
 include_once("../../../"."vendor/autoload.php");
-use \src\bitm\SEIP107992\mobile\mobile;
-$mobile=new mobile();
-echo $mobile->index();
+use \src\bitm\SEIP107992\hobby\hobby;
+$hobby=new hobby();
+echo $hobby->index();
 
 
 ?>
