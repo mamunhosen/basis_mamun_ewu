@@ -23,16 +23,7 @@ echo "<br/>";
   }
   fclose($file); 
 
-  $file1=fopen('newfile.txt','w') or die ('Unable to open file!');
-  $txt="Hello This line is going to be write in my file\n";
-  fwrite($file1, $txt);
-  $txt2="This is another line is going to be write\n";
-  fwrite($file1,$txt2);
-  fclose($file1);
-  $file2=fopen('newfile.txt','r') or die ('Unable to open file!');
-  while (!feof($file2)) {
-  	echo fgets($file2)."<br/>";
-  }
+  
 
   $numbers=[2,3,5,6,7,8,32,33,34,54,44,43,90,66,77];
   $arrlen=count($numbers);
