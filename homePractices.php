@@ -50,4 +50,10 @@ if (empty($var)) {
 else{
   echo "this is not null";
 }
+echo "<br/>";
+
+echo stristr("hello world!","lo");
+echo "<br/>";
+echo substr("Mamun hossain",0,5);
+
 ?>

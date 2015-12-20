@@ -20,19 +20,20 @@ if ($t <  "10") {
      echo "Have a good night!";
 }
 echo "<br/>";
-$x = 1;
-
-do {
-    echo "The number is: $x <br>";
-    $x++;
-} while ($x <= 5);
+# addslashes function
+$var="what do u 'mean' by that";
+ echo addslashes($var);
+ echo "<br/>";
+$str = "Hello world. It's a beautiful day.";
+print_r (explode(" ",$str));
 echo "<br/>";
-for ($i = 0; $i < 5; $i++) {
-    if ($i == 2){
-        continue;
-    }
-    print "$i\n";
-}
+$string=' iam listening you ';
+echo $string;
+echo "<br/>";
+$tr=trim($string);
+echo($tr).'<br/>';
+$str = "Hello World";
+echo str_pad($str,15,'!');
 
 
 
