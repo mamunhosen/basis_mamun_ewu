@@ -1,0 +1,21 @@
+
+
+.header {
+	text-align: center;
+    margin-top: 20px;
+}
+
+.table th {
+
+	text-align: center;
+}
+.table tr td {
+
+	text-align: center;
+}
+td .btn-warning{
+  margin-left: 10px;
+}
+td .btn-danger{
+  margin-left: 10px;
+}
