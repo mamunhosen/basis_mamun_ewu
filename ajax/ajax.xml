@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<family>
+	<father age='63'>Ruhul Amin</father>
+	<mother age='57'>Monwara Begum</mother>
+	<firstson age='34'>Monir Hossain
+		<grandson age='-2'>Mashfi</grandson>
+	</firstson>
+	<firstdaugther age='32'>Rabeya Akhter
+		<granddaughter age='7'>Mahiya Hossain ummi</granddaughter>
+		<grandson age='1'>Reehan</grandson>
+	</firstdaugther>
+	<seconddaughter age='28'>Lovely Akhter
+		<granddaughter age='3'>Arisha</granddaughter>
+	</seconddaughter>
+	<secondson age='25'>Hossain Mamun</secondson>
+</family>
