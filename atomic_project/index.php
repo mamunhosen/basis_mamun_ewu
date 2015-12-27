@@ -11,7 +11,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3 project">
-			<h3>Atomic Project</h3>
+			<h3>Atomic Project for basis</h3>
 		</div>
 	</div>
 </div>
