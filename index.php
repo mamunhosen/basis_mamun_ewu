@@ -12,6 +12,8 @@ and open the template in the editor.
     <body>
         <?php
        echo  "<h3>"."Hello Git"."</h3>";
+
         ?>
+       
     </body>
 </html>
