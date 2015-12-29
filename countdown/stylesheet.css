@@ -1,0 +1,24 @@
+.text{
+	background-color:#666666;
+	color :white;
+	text-align: center;
+	padding-top: 20px;
+
+}
+#counter{
+	min-height: 250px;
+	margin-top: 40px;
+
+}
+
+#counter span{
+	border: 1px solid grey;
+	color: #E5E5E5;
+	font-size: 26px;
+	font-weight: normal;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	padding:17px 17px 17px 17px;
+
+}
