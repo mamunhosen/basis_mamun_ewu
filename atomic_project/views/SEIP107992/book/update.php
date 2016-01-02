@@ -9,7 +9,8 @@
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\book\book;
 $book=new book();
-echo $book->update();
+
+$book->update($_REQUEST['book_title']);
 
 
 ?>

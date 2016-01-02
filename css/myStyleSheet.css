@@ -1,0 +1,61 @@
+#Dock{
+	
+	position:fixed;
+	/*use these value to positon the Dock */
+	bottom:400px;	
+	left:25%;				/* change it according to your convenience   */
+	height:40px;		
+	width:670px;
+	padding:0 10px;
+	border-radius:6px;
+	background: rgba(154,147,147,1);
+	-webkit-box-shadow: 2px 2px 3px rgba(172, 172, 172, 0.4);
+	-moz-box-shadow: 2px 2px 3px rgba(172, 172, 172, 0.4);
+	box-shadow: 2px 2px 3px rgba(172, 172, 172, 0.4);
+}
+
+.link{
+
+	position:relative;		/* to make the icons apper above the div Dock  */
+	bottom:60px;
+	width:100px;
+	height:100px;
+	display:block;
+	float:left;
+	background-position:bottom;
+	margin:5px;
+	background:#0F9;
+	-webkit-transition:all 0.60s linear 0s;
+	-moz-transition:all 0.60s linear 0s;
+	-o-transition:all 0.60s linear 0s;
+	-ms-transition:all 0.60s linear 0s;
+	transition:all 0.60s linear 0s;
+}
+.zoom .link:hover{
+ 	background-size:100px;
+	background-position:bottom;
+	-webkit-transition:all 0.60s linear 0s;
+	-moz-transition:all 0.60s linear 0s;
+	-o-transition:all 0.60s linear 0s;
+	-ms-transition:all 0.60s linear 0s;
+	transition:all 0.60s linear 0s;
+}
+
+.home{
+	background:url("images/home.png") center no-repeat;
+}
+.about{
+	background:url("images/about.png") center no-repeat;
+}
+.photos{
+	background:url("images/photos.png") center no-repeat;
+}
+.faq{
+	background:url("images/faq.png") center no-repeat;
+}
+.download{
+	background:url("images/download.png") center no-repeat;
+}
+.contact{
+	background:url("images/contact.png") center no-repeat;
+}
