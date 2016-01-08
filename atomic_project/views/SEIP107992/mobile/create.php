@@ -27,7 +27,11 @@ echo $mobile->create(); */
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			<form action="view.php" method="get">
+			<form action="store.php" method="post">
+			    <div class="form-group">
+				    <label for="m_serial">Mobile Serial:</label>
+				    <input type="text" class="form-control input-lg" id="m_serial" name="m_serial" placeholder="Enter Mobile Serial" required>
+			    </div>
 				<div class="form-group">
 				    <label for="m_name">Mobile Name:</label>
 				    <input type="text" class="form-control input-lg" id="m_name" name="m_name" placeholder="Enter Mobile Name" required>

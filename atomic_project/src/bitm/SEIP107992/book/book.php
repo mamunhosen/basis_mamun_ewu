@@ -38,28 +38,27 @@ class Book{
 		return "I am creating data";
 		
 	}
-	public function store($add_book){
+	public function store($add_book,$author,$isbn){
 
-		$sql="INSERT INTO book (book_title)
-        VALUES ('$add_book')";
+		$sql="INSERT INTO book (book_title,book_author,ISBN)
+        VALUES ('$add_book','$author','$isbn')";
         if (mysql_query($sql)) {
         	header('location:index.php?updation successful!');
         }
 
-
-	
-		
-	}
+}
 	public function edit(){
 		return "I am editing data";
 	}
-	public function update($title){
+	public function update($title,$author_name,$isbn){
 		$new_book_title=$title;
+		$new_author_name=$author_name;
+		$new_isbn=$isbn;
 		$book_id=$_GET['var'];
 		//echo $book_id;
-		$sql = "UPDATE book SET book_title='$new_book_title' WHERE book_id=$book_id";
+		$sql = "UPDATE book SET book_title='$new_book_title',book_author='$new_author_name',ISBN='$isbn' WHERE book_id=$book_id";
 		if (mysql_query($sql)) {
-			header('location:index.php?updation successful!');
+			header('location:index.php?update success!');
 		}
 		else{
 			echo "update cancelled";
@@ -74,6 +73,14 @@ class Book{
 			header('location:index.php?successfully Deleted!');
 		}
 		
+	}
+
+	public function view($id){
+		$query = "SELECT * FROM book WHERE book_id=$id;";
+		$result = mysql_query($query);
+		$row=mysql_fetch_assoc($result);
+		return $row;
+
 	}
 
 

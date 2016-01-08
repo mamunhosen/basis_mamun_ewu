@@ -34,7 +34,7 @@ $book=new book();
 			<table class="table table-bordered table-hover">
                <thead>
                     <tr>
-				        <th>Book ID</th>
+				        <th>ISBN</th>
 				        <th>Book Title</th>
 				        <th>Action</th>
                     </tr>
@@ -46,16 +46,19 @@ $book=new book();
                  
                
                	  <tr>
-			        <td><?php echo $booklist['book_id']?></td>
+			        <td><?php echo $booklist['ISBN']?></td>
 			        <td><?php echo $booklist['book_title']?></td>
 			        <td>
-			        <a class="btn btn-default" href="view.php">Views</a>
+			        <a class="btn btn-default" href="view.php?var=<?php echo $booklist['book_id']?>">Views</a>
 			        <a class="btn btn-warning" href="edit.php?var=<?php echo $booklist['book_id']?>">Edit</a>
 			        <a class="btn btn-danger" href="delete.php?var=<?php echo $booklist['book_id']?>">Delete</a>
 			        </td>
 			      </tr>
 			      <?php } ?>
+
               </tbody>
+             </table> 
+             <a class="btn btn-default" href="../../../index.php">Back to Project List</a>
 		</div>
 	</div>
 </div>

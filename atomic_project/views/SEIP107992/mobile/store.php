@@ -9,7 +9,7 @@
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\mobile\mobile;
 $mobile=new mobile();
-echo $mobile->store();
+$mobile->store($_POST['m_serial'],$_POST['m_name']);
 
 
 ?>

@@ -24,11 +24,19 @@ use \src\bitm\SEIP107992\book\book;
 
 	<div class="row">
     	<div class="col-sm-6 col-sm-offset-3">
-    		<form action="store.php" method="get">
+    		<form action="store.php" method="post">
+    		    <div class="form-group">
+			     <label for="isbn">ISBN:</label>
+			     <input type="text" class="form-control" id="isbn" name="isbn" required>
+			    </div>
     			<div class="form-group">
 			     <label for="book_title">Enter Book Title:</label>
 			     <input type="text" class="form-control" id="book_title" name="book_title" required>
-			   </div>
+			    </div>
+			    <div class="form-group">
+			     <label for="book_author">Enter Author Name:</label>
+			     <input type="text" class="form-control" id="book_author" name="book_author" required>
+			    </div>
 			     <input type="submit" class="btn btn-primary" value="Add New Book">
     		</form>
     	</div>

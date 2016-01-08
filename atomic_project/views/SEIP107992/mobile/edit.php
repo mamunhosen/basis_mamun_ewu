@@ -7,11 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
-<?php /*
+<?php 
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\mobile\mobile;
+$mb_id=$_GET['var'];
 $mobile=new mobile();
-echo $mobile->edit(); */
+$mobileUpdate=$mobile->view($mb_id); 
 ?>
 <div class="container">
 	<div class="row">
@@ -27,10 +28,14 @@ echo $mobile->edit(); */
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			<form>
+			<form action="update.php?var=<?php echo $mb_id ?>" method='post'>
+			    <div class="form-group">
+				    <label for="serial">New Serial NO:</label>
+				    <input type="text" class="form-control input-lg" id="serial" name="serial" value="<?php echo $mobileUpdate['mobile_serial']?>" required>
+			    </div>
 				<div class="form-group">
 				    <label for="m_name">New Mobile Name:</label>
-				    <input type="text" class="form-control input-lg" id="m_name" name="m_name" placeholder="Enter Mobile Name" required>
+				    <input type="text" class="form-control input-lg" id="m_name" name="m_name" value="<?php echo $mobileUpdate['mobile_name']?>" required>
 			    </div>
 			    <input type="submit" class="btn btn-warning" value="Update">
 			</form>

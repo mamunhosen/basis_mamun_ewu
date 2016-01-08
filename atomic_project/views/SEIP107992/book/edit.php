@@ -11,9 +11,9 @@
 <?php
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\book\book;
-//$book=new book();
 $book_id=$_GET['var'];
-//echo $book_id;
+$book=new book();
+$books=$book->view($book_id);
 ?>
 <div class="container">
 	<div class="row">
@@ -27,9 +27,17 @@ $book_id=$_GET['var'];
     <div class="row">
     	<div class="col-sm-6 col-sm-offset-3">
     		<form action="update.php?var=<?php echo $book_id ?>" method="post">
+    		   <div class="form-group">
+			     <label for="isbn">ISBN:</label>
+			     <input type="text" class="form-control" id="isbn" name="isbn" value="<?php echo $books['ISBN']?>" required>
+			   </div>
     			<div class="form-group">
 			     <label for="book_title">New Book Title:</label>
-			     <input type="text" class="form-control" id="book_title" name="book_title" required>
+			     <input type="text" class="form-control" id="book_title" name="book_title" value="<?php echo $books['book_title']?>" required>
+			   </div>
+			   <div class="form-group">
+			     <label for="book_author">Author Name:</label>
+			     <input type="text" class="form-control" id="book_author" name="book_author" value="<?php echo $books['book_author']?>" required>
 			   </div>
 			     <input type="submit" class="btn btn-warning" value="update">
     		</form>
