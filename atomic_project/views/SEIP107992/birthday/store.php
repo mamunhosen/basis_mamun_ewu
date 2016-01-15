@@ -6,10 +6,11 @@
 </head>
 <body>
 <?php
+session_start();
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\birthday\birthday;
 $birthday=new birthday();
-echo $birthday->store();
+$birthday->store($_REQUEST);
 
 
 ?>

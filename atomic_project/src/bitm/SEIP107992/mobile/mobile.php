@@ -1,9 +1,12 @@
 <?php
 namespace src\bitm\SEIP107992\mobile;
+
+use \src\bitm\SEIP107992\message\message;
+use \src\bitm\SEIP107992\utility\utility;
 class Mobile{
 
-	public $id='';
-	public $title='';
+	public $serial_id='';
+	public $mobile_name='';
 	public $created='';
 	public $modified='';
 	public $created_by='';
@@ -35,12 +38,22 @@ class Mobile{
 		return "I am creating data";
 		
 	}
-	public function store($mobile_serial,$mobile_name){
+	public function store($mobile_data=array()){
+	    if (is_array($mobile_data) & array_key_exists('m_name',$mobile_data)) {
+    	$this->serial_id=$mobile_data['m_serial'];
+    	$this->mobile_name=$mobile_data['m_name'];
 		$sql="INSERT INTO mobile (mobile_serial,mobile_name)
-        VALUES ('$mobile_serial','$mobile_name')";
+        VALUES ('$this->serial_id','$this->mobile_name')";
         if (mysql_query($sql)) {
-        	header('location:index.php?updation successful!');
+        	message::set('Mobile data is added successfully.');
         }
+        else{
+        	message::set('There is an error while storing mobile information, please try again.');
+
+        }
+
+    }
+    utility::redirect('index.php');
 		
 	}
 	public function edit(){

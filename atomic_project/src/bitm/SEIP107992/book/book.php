@@ -1,9 +1,13 @@
 <?php
 namespace src\bitm\SEIP107992\book;
+
+use \src\bitm\SEIP107992\message\message;
+use \src\bitm\SEIP107992\utility\utility;
 class Book{
 
-	public $id='';
-	public $title='';
+	public $isbn='';
+	public $book_name='';
+	public $book_author='';
 	public $created='';
 	public $modified='';
 	public $created_by='';
@@ -38,13 +42,26 @@ class Book{
 		return "I am creating data";
 		
 	}
-	public function store($add_book,$author,$isbn){
+	public function store($book_data=array()){
+        if (is_array($book_data) & array_key_exists('book_title',$book_data)) {
+        	$this->isbn=$book_data['isbn'];
+        	$this->book_name=$book_data['book_title'];
+            $this->book_author=$book_data['book_author'];
 
-		$sql="INSERT INTO book (book_title,book_author,ISBN)
-        VALUES ('$add_book','$author','$isbn')";
+        $sql="INSERT INTO book (book_title,book_author,ISBN)VALUES ('$this->book_name','$this->book_author','$this->isbn')";
         if (mysql_query($sql)) {
-        	header('location:index.php?updation successful!');
+        	message::set('Book data is added successfully.');
         }
+
+        else{
+        	message::set('There is an error while storing book information, please try again.');
+
+        }
+        	
+        }
+		
+
+        utility::redirect('index.php');
 
 }
 	public function edit(){

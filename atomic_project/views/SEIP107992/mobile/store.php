@@ -6,10 +6,11 @@
 </head>
 <body>
 <?php
+session_start();
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\mobile\mobile;
 $mobile=new mobile();
-$mobile->store($_POST['m_serial'],$_POST['m_name']);
+$mobile->store($_REQUEST);
 
 
 ?>

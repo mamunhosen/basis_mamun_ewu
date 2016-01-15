@@ -9,8 +9,11 @@
 </head>
 <body>
 <?php
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+session_start();
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\book\book;
+use \src\bitm\SEIP107992\message\message;
 $book=new book();
  $books=$book->index();
  
@@ -26,9 +29,20 @@ $book=new book();
 	</div>
 </div>
 
+
+
 <div class="container">
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3 add_book">
+		<div class="col-sm-6 col-sm-offset-3 add_item">
+		  <?php if (message::get()!=NULL) {   ?>
+
+		  <div class="alert alert-success">
+		  	<strong><?php echo message::flash();?></strong>
+		  </div>
+
+		  <?php } ?>
+		
+
 		  <h4 id="dwnld">Download as a PDF <a href=""><img src="../public/images/pdf.jpg"></a></h4>
 		   <a class="btn btn-primary pull-right" href="create.php">Create New</a>
 			<table class="table table-bordered table-hover">
@@ -51,7 +65,7 @@ $book=new book();
 			        <td>
 			        <a class="btn btn-default" href="view.php?var=<?php echo $booklist['book_id']?>">Views</a>
 			        <a class="btn btn-warning" href="edit.php?var=<?php echo $booklist['book_id']?>">Edit</a>
-			        <a class="btn btn-danger" href="delete.php?var=<?php echo $booklist['book_id']?>">Delete</a>
+			        <a class="btn btn-danger" id="dlt_item" href="delete.php?var=<?php echo $booklist['book_id']?>">Delete</a>
 			        </td>
 			      </tr>
 			      <?php } ?>
@@ -63,6 +77,7 @@ $book=new book();
 	</div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../public/custom.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
 </body>
 </html>

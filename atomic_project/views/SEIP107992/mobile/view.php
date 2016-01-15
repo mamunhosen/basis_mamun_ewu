@@ -9,6 +9,7 @@
 </head>
 <body>
 <?php
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\mobile\mobile;
 $id=$_GET['var'];
