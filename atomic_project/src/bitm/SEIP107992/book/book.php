@@ -16,7 +16,7 @@ class Book{
 
 	public function __construct(){
 
-		$connection=mysql_connect('localhost','Hossain','safepassword');
+		$connection=mysql_connect('localhost','root','phpdeveloper');
 		if ($connection->connect_error) {
 			 die("Connection failed: " . $connection->connect_error);
 		}

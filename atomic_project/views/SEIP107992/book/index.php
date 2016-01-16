@@ -15,7 +15,7 @@ include_once("../../../"."vendor/autoload.php");
 use \src\bitm\SEIP107992\book\book;
 use \src\bitm\SEIP107992\message\message;
 $book=new book();
- $books=$book->index();
+$books=$book->index();
  
 
 ?>
@@ -43,7 +43,7 @@ $book=new book();
 		  <?php } ?>
 		
 
-		  <h4 id="dwnld">Download as a PDF <a href=""><img src="../public/images/pdf.jpg"></a></h4>
+		  <h4 id="dwnld">Download as a PDF <a href="pdf.php"><img src="../public/images/pdf.jpg"></a> | <a href="excel.php">XL</a> </h4>
 		   <a class="btn btn-primary pull-right" href="create.php">Create New</a>
 			<table class="table table-bordered table-hover">
                <thead>

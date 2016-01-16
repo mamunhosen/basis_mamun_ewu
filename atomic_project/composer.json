@@ -3,5 +3,10 @@
 		"psr-4":{
 			"src\\" : "src"
 		}
-	}
+	},
+	"require": {
+        "phpoffice/phpexcel": "1.8.1",
+        "mpdf/mpdf": "v6.0.0"
+       
+    }
 }
